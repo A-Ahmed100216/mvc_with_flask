@@ -1,5 +1,5 @@
 # Import relevant packages
-from flask import Flask, jsonify, redirect, url_for
+from flask import Flask, jsonify, redirect, url_for, render_template
 
 # Create an instance of our app
 app = Flask(__name__)
@@ -50,6 +50,14 @@ def login():
 def welcome_user(username):
     return "<h1>Welcome to DevOps {}</h1>".format(username)
 
+# We want to direct to our html file. Import the render_template module from flask.
+@app.route("/index/")
+def index():
+    return render_template("index.html")
+
+@app.route("/loginform/")
+def base():
+    return render_template("index.html")
 
 if __name__=="__main__":
     app.run(debug=True)

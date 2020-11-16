@@ -90,6 +90,26 @@ def welcome_user(username):
     return "<h1>Welcome to DevOps {}</h1>".format(username)
 ```
 
+## Interacting with HTML
+* Naming convention is essential.
+* We need to create a template folder in our directory. 
+   * Flask looks for template folder and anything inside it.
+   * We will create an index.html folder inside our templates folder.
+* We can use Bootstrap to add CSS, JS and HTML to design our page.
 
+
+
+## Task 
+1. Create a base.html file in templates folder
+2. Copy code from index.html to base.html
+3. In the index.html extends/inherit everything from base.html
+4. Google how to extend code from base.html to index.html
+5. Create text boxes for login form
+6. Search and find out syntax to write a for loop in index.html
+7. Create a function in python to create an API to base.html
+
+   
+
+   
  
 
