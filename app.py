@@ -12,7 +12,7 @@ students = [
 @app.route("/")  # localhost:5000 this is the default port for Flask
 
 def home():
-    return "<h1>This is a dream team of DevOps Spartans!</hi>"
+    return render_template("home.html")
 # This function runs when the URL/API is accessed
 
 
@@ -26,9 +26,9 @@ def customised_api():
 
 
 
-@app.route("/welcome/")
+@app.route("/welcome/") #localhost:5000/welcome/
 def greet_user():
-    return "<h1>Welcome to DevOps team</h1>"
+    return render_template("welcome.html")
 
 
 # Find out the module to redirect user back to specific page
@@ -41,8 +41,9 @@ def greet_user():
 # Create a new route for login
 @app.route("/login/")
 def login():
+    return redirect(url_for("/welcome/"))
     # redirect to the greet user page
-    return redirect(url_for("greet_user"))
+
 
 
 # New route for user to input their name
@@ -53,10 +54,14 @@ def welcome_user(username):
 # We want to direct to our html file. Import the render_template module from flask.
 @app.route("/index/")
 def index():
-    return render_template("index.html")
+    return render_template("base.html")
 
 @app.route("/loginform/")
 def base():
+    return render_template("login.html")
+
+@app.route("/for_loop/")
+def for_loop():
     return render_template("index.html")
 
 if __name__=="__main__":
