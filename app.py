@@ -38,7 +38,7 @@ def greet_user():
 #     return flask.redirect("/welcome/")
 
 # import redirect and url_for module
-# Craete a new route for login
+# Create a new route for login
 @app.route("/login/")
 def login():
     # redirect to the greet user page
